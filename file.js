@@ -33,3 +33,14 @@ return fName+" "+lName;
 }
 console.log(fullName());
 console.log(fullName("JIVISHAAA","GUPTA"));
+
+console.log("===========PERCENTAGE================");
+function totalMarks(math , eng , sci){
+    return math + eng + sci;
+}
+function percentage(total){
+    return (total / 300 * 100)
+}
+total = totalMarks(95 , 99 , 100);
+console.log("TOTAL MARKS" , total);
+console.log("PERCENTAGE" , percentage (total) , "x" );
