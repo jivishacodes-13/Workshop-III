@@ -13,8 +13,23 @@ else{
     console.log("B IS GREATER");
 }
 
-console.log("=========FUNCTIONS===========");
+console.log("=========FUNCTIONS=========");
 function abes(){
     console.log("THIS IS OUTPUT ABES OKAY ")
 }
 abes();
+
+console.log("========FUNCTION RETURN==========")
+    function add( x , y){
+        return x+y;
+    }
+    var result = add (20 , 40);
+    console.log("SUM = " , result)
+
+
+console.log("===========DEFAULT ARGUEMENTS==========")
+function fullName(fName = "ABES", lName="EC"){
+return fName+" "+lName;
+}
+console.log(fullName());
+console.log(fullName("JIVISHAAA","GUPTA"));
