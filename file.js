@@ -43,4 +43,4 @@ function percentage(total){
 }
 total = totalMarks(95 , 99 , 100);
 console.log("TOTAL MARKS" , total);
-console.log("PERCENTAGE" , percentage (total) , "x" );
+console.log("PERCENTAGE" , percentage (total) , "%" );
