@@ -38,3 +38,11 @@ student2.show();
 student3.show();
 student4.show();
 student5.show();
+// static method
+class hello {
+    static name = "Omika Kumar";
+    static display() {
+        console.log("Name: " + hello.name);
+    }
+}
+hello.display();
