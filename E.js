@@ -59,31 +59,76 @@
 // let obj3 = new hello1();
 // obj3.show();
 // University wala program
-class Student {
-    static count = 0;
-    constructor(rollNo, name, marks) {
-        this.rollNo = rollNo;
-        this.name = name;
-        this.marks = marks;
-        Student.count++;
+// class Student {
+//     static count = 0;
+//     constructor(rollNo, name, marks) {
+//         this.rollNo = rollNo;
+//         this.name = name;
+//         this.marks = marks;
+//         Student.count++;
+//     }
+//     displayResult() {
+//         console.log("Roll No:", this.rollNo);
+//         console.log("Name:", this.name);
+//         console.log("Marks:", this.marks);
+//         if (this.marks >= 40)
+//             console.log("Result: Passed");
+//         else
+//             console.log("Result: Failed");
+//     }
+//     static displayCount() {
+//         console.log("Total Students:", Student.count);
+//     }
+// }
+// let s1 = new Student(101, "Jivisha", 95);
+// let s2 = new Student(102, "Omika", 97);
+// let s3 = new Student(103, "Saanvi", 96);
+// s1.displayResult();
+// s2.displayResult();
+// s3.displayResult();
+// Student.displayCount();
+// bank account wala program
+class BankAccount {
+    constructor(accountNo, holderName, balance) {
+        this.accountNo = accountNo;
+        this.holderName = holderName;
+        this.balance = balance;
     }
-    displayResult() {
-        console.log("Roll No:", this.rollNo);
-        console.log("Name:", this.name);
-        console.log("Marks:", this.marks);
-        if (this.marks >= 40)
-            console.log("Result: Passed");
-        else
-            console.log("Result: Failed");
+
+    deposit(amount) {
+        this.balance += amount;
+        console.log("Deposited: " + amount);
     }
-    static displayCount() {
-        console.log("Total Students:", Student.count);
+
+    withdraw(amount) {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+            console.log("Withdrawn: " + amount);
+        } else {
+            console.log("Insufficient Balance");
+        }
+    }
+
+    displayBalance() {
+        console.log("Account No: " + this.accountNo);
+        console.log("Holder Name: " + this.holderName);
+        console.log("Balance: " + this.balance);
+    }
+
+    static bankInfo() {
+        console.log("Bank Name: ABC Bank");
+        console.log("Bank provides safe and secure banking services.");
     }
 }
-let s1 = new Student(101, "Jivisha", 95);
-let s2 = new Student(102, "Omika", 97);
-let s3 = new Student(103, "Saanvi", 96);
-s1.displayResult();
-s2.displayResult();
-s3.displayResult();
-Student.displayCount();
+
+BankAccount.bankInfo();
+const a1 = new BankAccount(101, "Jivisha", 50000000);
+const a2 = new BankAccount(102, "Omika" ,10000);
+console.log("\nAccount 1:");
+a1.deposit(2000);
+a1.withdraw(90000);
+a1.displayBalance();
+console.log("\nAccount 2:");
+a2.deposit(1);
+a2.withdraw(5);
+a2.displayBalance();
