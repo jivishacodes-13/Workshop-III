@@ -46,3 +46,15 @@ class hello {
     }
 }
 hello.display();
+class hello1 {
+    static name = "Jivisha Gupta";
+    constructor() {
+        this.instructor = "Instance variable";
+    }
+    show(){
+        console.log("Instructor: " + this.instructor);
+        console.log("Name: " + hello1.name);
+    }
+}
+let obj3 = new hello1();
+obj3.show();
